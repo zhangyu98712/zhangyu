@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1440">
+  <title>张钰 - 个人作品集</title>
+  <style>
+    body { margin: 0; background: #F9FAFB; font-family: Roboto, sans-serif; color: #000; }
+    html { scroll-behavior: smooth; }
+    .nav { width: 100%; height: 68px; background: linear-gradient(90deg, #fff 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%); display: flex; align-items: center; justify-content: space-between; padding: 0 32px; position: sticky; top: 0; z-index: 10; }
+    .nav .logo { font-family: Pacifico, cursive; font-size: 30px; font-weight: 400; color: #000; }
+    .nav .links { display: flex; gap: 32px; }
+    .nav .links a { color: #000; text-decoration: none; font-size: 16px; }
+    .hero { width: 100%; height: 800px; background: url('images/D.png') center/cover no-repeat; display: flex; align-items: center; justify-content: center; position: relative; }
+    .hero-content { background: rgba(255,255,255,0.9); border-radius: 12px; padding: 60px 64px; text-align: left; max-width: 664px; margin: 0 auto; }
+    .hero-title { font-size: 60px; font-weight: bold; color: #000; margin-bottom: 24px; }
+    .hero-desc { font-size: 20px; color: #666; margin-bottom: 32px; line-height: 1.4; }
+    .hero-btn { display: inline-block; background: #000; color: #fff; padding: 12px 32px; border-radius: 4px; font-size: 16px; text-decoration: none; }
+    .section { width: 100%; padding: 80px 32px; box-sizing: border-box; }
+    .section-title { text-align: center; font-size: 36px; font-weight: bold; color: #000; margin-bottom: 40px; }
+    .works { display: flex; flex-wrap: wrap; gap: 32px; justify-content: center; }
+    .work-card { width: 437px; height: 300px; border-radius: 12px; overflow: hidden; background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.04); display: flex; align-items: center; justify-content: center; position: relative; cursor: pointer; }
+    .work-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s, filter 0.3s; }
+    .work-card:hover img { transform: scale(1.06); filter: grayscale(1) brightness(0.8); }
+    .work-info {
+      position: absolute;
+      left: 0; top: 0; width: 100%; height: 100%;
+      background: rgba(0,0,0,0.55);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s;
+      padding: 24px;
+      text-align: center;
+    }
+    .work-card:hover .work-info { opacity: 1; pointer-events: auto; }
+    .work-title {
+      font-size: 26px;
+      font-weight: bold;
+      margin-bottom: 16px;
+      letter-spacing: 1px;
+    }
+    .work-desc {
+      font-size: 18px;
+      line-height: 1.7;
+    }
+    .contact-section { background: #F9FAFB; }
+    .contact-form { max-width: 600px; margin: 0 auto; background: #fff; border-radius: 12px; padding: 40px; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+    .contact-form h2 { font-size: 36px; text-align: center; margin-bottom: 40px; }
+    .form-group { margin-bottom: 24px; }
+    .form-label { display: block; color: #9CA3AF; margin-bottom: 8px; font-size: 16px; }
+    .form-input, .form-textarea { width: 100%; padding: 12px 16px; border: 1px dashed #E5E7EB; border-radius: 12px; font-size: 16px; font-family: inherit; }
+    .form-textarea { min-height: 120px; resize: vertical; }
+    .form-btn { width: 100%; background: #000; color: #fff; border: none; border-radius: 4px; padding: 12px 0; font-size: 16px; cursor: pointer; }
+    .footer { width: 100%; background: #000; color: #fff; padding: 32px 0 0 0; }
+    .footer-content { max-width: 1440px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 32px; }
+    .footer-left { font-size: 16px; }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { color: #fff; text-decoration: none; font-size: 20px; }
+    @media (max-width: 900px) {
+      .works { flex-direction: column; align-items: center; }
+      .work-card { width: 100%; max-width: 437px; }
+      .hero-content { padding: 32px; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="logo">张钰</div>
+    <div class="links">
+      <a href="#hero">首页</a>
+      <a href="#works">作品</a>
+      <a href="#contact">联系</a>
+    </div>
+  </nav>
+  <section class="hero" id="hero">
+    
+  </section>
+  <section class="section" id="works">
+    <div class="section-title">精选作品</div>
+    <div class="works">
+      <div class="work-card" onclick="window.location.href='work.html'" style="cursor:pointer;">
+        <img src="images/10.jpg" alt="作品1" style="pointer-events: none;">
+        <div class="work-info" style="pointer-events: none;">
+          <div class="work-title">ui设计作品</div>
+          <div class="work-desc">锦悦app设计</div>
+        </div>
+      </div>
+      <div class="work-card" onclick="window.location.href='workk.html'" style="cursor:pointer;">
+        <img src="images/20.jpg" alt="作品2">
+        <div class="work-info">
+          <div class="work-title">挑战杯获奖作品</div>
+          <div class="work-desc">从消极分散到爱北邵洼</div>
+        </div>
+      </div>
+      <div class="work-card" onclick="window.location.href='workkk.html'" style="cursor:pointer;">
+        <img src="images/30.jpg" alt="作品3">
+        <div class="work-info">
+          <div class="work-title">京彩大赛获奖作品</div>
+          <div class="work-desc">方言拾遗</div>
+        </div>
+      </div>
+      <div class="work-card" onclick="window.location.href='workkkk.html'" style="cursor:pointer;">
+        <img src="images/50.jpg" alt="作品4">
+        <div class="work-info">
+          <div class="work-title">挑战杯获奖作品</div>
+          <div class="work-desc">宋庄红韵艺绘芳华</div>
+        </div>
+      </div>
+      <div class="work-card" onclick="window.location.href='workkkkk.html'" style="cursor:pointer;">
+        <img src="images/40.jpg" alt="作品5">
+        <div class="work-info">
+          <div class="work-title">建模作业</div>
+          <div class="work-desc">大二期间建模作品</div>
+        </div>
+      </div>
+      <div class="work-card" onclick="window.location.href='workkkkkk.html'" style="cursor:pointer;">
+        <img src="images/40.jpg" alt="作品6">
+        <div class="work-info">
+          <div class="work-title">实习工作</div>
+          <div class="work-desc">大一时期实习贴片</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section contact-section" id="contact">
+    <form class="contact-form">
+      <h2>联系我</h2>
+      <div class="form-group">
+        <label class="form-label" for="name">您的姓名</label>
+        <input class="form-input" id="name" name="name" type="text" placeholder="请输入您的姓名" required>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="email">电子邮箱</label>
+        <input class="form-input" id="email" name="email" type="email" placeholder="请输入您的邮箱" required>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="message">留言内容</label>
+        <textarea class="form-textarea" id="message" name="message" placeholder="请输入留言内容" required></textarea>
+      </div>
+      <button class="form-btn" type="submit">发送消息</button>
+    </form>
+  </section>
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-left">© 2024 张钰. 保留所有权利</div>
+      <div class="footer-links">
+        <a href="#" title="微信"><span>微信</span></a>
+        <a href="#" title="微博"><span>微博</span></a>
+        <a href="#" title="邮箱"><span>邮箱</span></a>
+      </div>
+    </div>
+  </footer>
+  <button id="backToTop" title="返回首页" style="position: fixed; right: 32px; bottom: 32px; width: 56px; height: 56px; border-radius: 50%; background: #000; color: #fff; border: none; box-shadow: 0 2px 8px rgba(0,0,0,0.15); display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 1000; font-size: 28px;">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M14 20V8M14 8L8 14M14 8L20 14" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+  <script>
+    document.getElementById('backToTop').onclick = function() {
+      document.getElementById('hero').scrollIntoView({ behavior: 'smooth' });
+    };
+  </script>
+  <canvas id="trail-canvas" style="position:fixed;left:0;top:0;width:100vw;height:100vh;pointer-events:none;z-index:9999;"></canvas>
+  <script>
+    const canvas = document.getElementById('trail-canvas');
+    const ctx = canvas.getContext('2d');
+    let dpr = window.devicePixelRatio || 1;
+    function resizeCanvas() {
+      canvas.width = window.innerWidth * dpr;
+      canvas.height = window.innerHeight * dpr;
+      canvas.style.width = window.innerWidth + 'px';
+      canvas.style.height = window.innerHeight + 'px';
+    }
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+    let trails = [];
+    document.addEventListener('mousemove', function(e) {
+      trails.push({
+        x: e.clientX * dpr,
+        y: e.clientY * dpr,
+        alpha: 1,
+        radius: 10 + Math.random() * 6
+      });
+    });
+
+    function draw() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      for (let i = 0; i < trails.length; i++) {
+        let t = trails[i];
+        ctx.beginPath();
+        ctx.arc(t.x, t.y, t.radius, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(0,0,0,${t.alpha})`;
+        ctx.fill();
+        t.alpha -= 0.025;
+        t.radius *= 0.98;
+      }
+      trails = trails.filter(t => t.alpha > 0.05 && t.radius > 2);
+      requestAnimationFrame(draw);
+    }
+    draw();
+  </script>
+</body>
+</html>
+
+</rewritten_file>
